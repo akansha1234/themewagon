@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ThemeWagon</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playball&amp;subset=latin-ext" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<style>
+	body{
+		padding-top: 370px;
+	}
+	nav{
+		max-width: 80%;
+		margin-left:85px;
+		margin-top: 20px;
+		background-color:#f8f9fa;
+	}
+	.container-fluid{
+		border: 2px solid #f8f9fa;
+		border-radius:200px;
+		box-sizing: border-box;
+	}
+	.navbar-right{
+		padding-right:23px;
+		
+	}
+	.navbar-right li{
+		margin-top: 10px;
+		margin-left: 30px;
+	}
+	.navbar-right li i{
+		color: grey;
+	}
+	.nav li a{
+		color:grey;
+	}
+	@media (max-width:631px){
+		nav{
+			max-width: 100%;
+			margin-left: 0px;
+			max-height:auto;
+		}
+	}
+	@media (max-width:631px){
+		.container-fluid i{
+			margin-top:-100px;
+		}
+	}
+	@media (max-width:631px){
+		.navbar-right li{
+			display: inline-block;
+		}
+	}
+	body,#slider,.wrap,.slide-content{
+		margin:0;
+		padding:0;
+		width:100%;
+		height: 100vh;
+		overflow-x: hidden;
+	}
+	.wrap{
+		position: relative;
+	}
+	.slide{
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.slide1{
+		background-image: url("https://images.pexels.com/photos/1879061/pexels-photo-1879061.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+	}
+	.slide2{
+		background-image: url('https://images.pexels.com/photos/2030037/pexels-photo-2030037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
+	}
+	.slide3{
+		background-image: url('https://images.pexels.com/photos/276700/pexels-photo-276700.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
+	}
+	.slide-content{
+		display: flex;
+		flex-direction: column;
+		color: white;
+		padding-top: 30%;
+		padding-left: 5%;
+		font-weight: 900;
+
+	}
+	@media (max-width: 631px){
+		.slide-content{
+			padding-top:100%;
+		}
+	}
+	.slide-content button{
+         background-color: transparent;
+         border: 2px solid white;
+	}
+	.slide-content button:hover{
+		background-color: white;
+		color: black;
+	}
+	.arrow{
+		cursor:pointer;
+		position: absolute;
+		top:50%;
+		margin-top: -50px;
+		width:0;
+		height:0;
+		border-style: solid;
+	}
+	#arrow-left{
+		border-width:30px 40px 30px 0;
+		border-color:transparent #fff transparent transparent;
+		left:0;
+		margin-left: 30px;
+	}
+	#arrow-right{
+		border-width:30px 0px 30px 40px;
+		border-color:transparent  transparent transparent #fff;
+		right:0;
+		margin-right: 30px;
+	}
+	.container2{
+		max-width: 100%;
+		margin-top: 5%;
+	}
+	.content{
+		text-align: center;
+		font-size: 28px;
+		color:#555;
+	}
+	.row{
+		margin: 3%;
+	}
+	.image-responsive{
+		max-width: 100%;
+		height: auto;
+	}
+	.container2 img{
+		max-width: 100%;
+		max-height: auto;
+	}
+	.thumbnail{
+		position: relative;
+	}
+	.caption{
+	position: absolute;
+	display: block;
+	top:270%;
+	left:36%;
+	color:white;
+	font-weight: 900;
+	}
+	.caption h3{
+		font-size:8vw;
+		letter-spacing:5px;
+	}
+	.caption h4{
+		font-size:6vw;
+		letter-spacing:5px;
+	}
+	@media (max-width:631px){
+		.caption{
+			top:368%;
+			left:30%;
+		}
+	}
+	.content1{
+		text-align: center;
+		max-width:50%;
+		margin-top: 8%;
+		margin-left:26%;
+		color: #555;
+		max-height: auto;
+	}
+	@media (max-width:631px){
+		.content1{max-width:100%;
+			margin-left: 0px;
+	}
+}
+.container4 img{
+	max-width: 100%;
+	max-height: auto;
+}
+.thumbnail1 img{
+	max-width: 100%;
+	max-height:auto;
+}
+.thumbnail{
+	position:relative;
+}
+.caption1{
+	position:absolute;
+	display: block;
+	color: white;
+	top:780%;
+	left:30%;
+}
+.caption1 h3{
+	font-size:6vw;
+	letter-spacing: 10px;
+	font-weight:normal;
+}
+.caption1 h4{
+	font-size:4vw;
+	letter-spacing: 10px;
+	font-weight: normal;
+}
+@media (max-width: 631px){
+	.caption1{
+		position: absolute;
+		top:628%;
+		left:22%;
+	}
+}
+.content2{
+	margin-top: 5%;
+	text-align: center;
+	max-width: 50%;
+	max-height: auto;
+	color: #555;
+	margin-left:26%;
+}
+.container6 img{
+    max-width: 100%;
+    max-height: auto;
+}
+@media (max-width: 631px){
+	.content2{
+		max-width:100%;
+			margin-left: 0px;
+	}
+}
+.thumbnail2{
+	position: relative;
+}
+.thumbnail2 img{
+	max-width: 100%;
+	max-height:auto;
+}
+.caption2{
+	color: white;
+	position: absolute;
+	display: block;
+	top:1200%;
+	left:26%;
+}
+.caption2 h3{
+	font-size:6.456vw;
+}
+.caption2 h4{
+	font-size:4.456vw;
+}
+@media (max-width: 631px){
+	.caption2{
+		position: absolute;
+		top:900%;
+		left:22%;
+	}
+}
+
+
+.content3{
+	text-align: center;
+	margin-top: 5%;
+	color:#555;
+	max-width: 50%;
+	max-height: auto;
+	margin-left: 26%;
+}
+@media (max-width: 631px){
+	.content3{
+		max-width:100%;
+			margin-left: 0px;
+	}
+}
+.container8 img{
+	max-width: 100%;
+	max-height: auto;
+}
+
+
+.content4{
+	margin-top: 5%;
+	text-align: center;
+	max-width: 50%;
+	max-height: auto;
+	color: #555;
+	margin-left:26%;
+}
+@media (max-width: 631px){
+	.content4{
+		max-width:100%;
+			margin-left: 0px;
+	}
+}
+.container10 img{max-width: 100%;
+max-height: auto;}
+.container11{
+	margin-top:5%;
+	background-color:#e0e0e0;
+	padding:30px;
+}
+.icons{
+	padding-left:45%;
+}
+.icons i{
+	margin-left:3%;
+	font-size:19px;
+}
+.container12{
+	background-color: #343a40;
+	color:white;
+	padding:40px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	
+	<nav class="navbar navbar-transparent navbar-fixed-top">
+		<div class="container-fluid">
+		<div class="navbar-header">
+<a class="navbar-brand" href="#" style="color:#555;">FREYA</a>
+</div>
+<button type="button" class='navbar-toggle' data-toggle="collapse" data-target="#navbarcollapse">
+	<i class="fa fa-align-justify" style="font-size:48px;color:#555;"></i>
+</button>
+<div class="collapse navbar-collapse" id="navbarcollapse">
+<ul class="nav navbar-nav">
+<li><a href="#">Home</a></li>
+<li><a href="#">Pages</a></li>
+<li><a href="#">Projects</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Elements</a></li>
+</ul>
+
+<ul class="nav navbar-nav navbar-right">
+ 
+       <li><i class="fab fa-facebook-f"></i></li>
+       <li><i class="fab fa-instagram"></i></li>
+       <li><i class="fab fa-twitter"></i></li>
+       <li><i class="fab fa-dribbble"></i></li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+
+
+<div class="wrap">
+	<div id="arrow-left" class="arrow"></div>
+	<div class="slider">
+		<div class="slide slide1">
+			<div class="slide-content">
+				<div class="row">
+					<div class="col-lg-4">
+						<h3>FRENCH VALLEY</h3>
+						<h2>Luxurious Apartment</h2>
+					</div>
+					<div class="col-lg-3 col-lg-offset-5">
+						<button type="btn" class="btn btn-lg">MORE ABOUT FREYA</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide slide2">
+			<div class="slide-content">
+				<div class="row">
+					<div class="col-lg-4">
+						<h3>UPPER CHESTERFIELD</h3>
+						<h2>Sorption Marking Studio</h2>
+					</div>
+					<div class="col-lg-3 col-lg-offset-5">
+						<button type="btn" class="btn btn-lg">MORE ABOUT SORPTION</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide slide3">
+			<div class="slide-content">
+				<div class="row">
+					<div class="col-lg-4">
+						<h3>AVEPOINT RICHMOND</h3>
+						<h2>More livable spaces</h2>
+					</div>
+					<div class="col-lg-3 col-lg-offset-5">
+						<button type="btn" class="btn btn-lg">VIEW CASE STUDY</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="arrow-right" class="arrow"></div>
+</div>
+
+<script>
+	let sliderImages=document.querySelectorAll('.slide'),
+	arrowLeft=document.querySelector('#arrow-left'),
+	arrowRight=document.querySelector('#arrow-right'),
+	current=0;
+	 function reset(){
+	 	for(let i=0;i<sliderImages.length;i++){
+	 		sliderImages[i].style.display='none'
+	 	}
+	 }
+
+	 function startSlide(){
+	 	reset();
+	 	sliderImages[0].style.display='block';
+	 }
+       function slideLeft(){
+       	reset()
+       	sliderImages[current-1].style.display='block';
+       	current--;
+       }
+
+       function slideRight(){
+       	reset()
+       	sliderImages[current+1].style.display='block';
+       	current++;
+       }
+
+
+       arrowLeft.addEventListener('click',function(){
+       	if(current===0){
+       		current=sliderImages.length;
+       	}
+       
+	 slideLeft();
+	 })
+        arrowRight.addEventListener('click',function(){
+       	if(current===sliderImages.length-1){
+       		current=-1;
+       	}
+       
+	 slideRight();
+	 });
+
+        startSlide();
+</script>
+
+<div class="container2">
+	<div class="content">
+	<h3>Freya Inc. is the hub for world's top architects and inventors, ready to turn your imagination into reality</h3>
+	<br>
+<p>All photographs provided for demo purposes only.</p>
+</div>
+
+<div class="row">
+	<div class="col-lg-4 col-sm-12">
+		<img src="http://markup.themewagon.com/tryfreya/assets/images/img_1.jpg">
+		<h3>RESIDENTIAL</h3>
+		<p>From Manitoba to Brooklyn, affordable, comfortable and livable houses for families of all shapes and sizes are covered by us. Cras justo odio, dapibus, egestas eget quam lorem ipsum.</p>
+	</div>
+
+	<div class="col-lg-4 col-sm-12">
+		<img src="http://markup.themewagon.com/tryfreya/assets/images/img_2.jpg">
+		<h3>COMMERCIAL</h3>
+		<p>We have also designing interiors for restaurants, bar or office spaces. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dolor.</p>
+	</div>
+
+	<div class="col-lg-4 col-sm-12">
+		<img src="http://markup.themewagon.com/tryfreya/assets/images/img_3.jpg">
+		<h3>HOSPITALITY</h3>
+		<p>You need your guests to have an unforgettable experience, Freya Inc. is ready to deliver. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus.</p>
+	</div>
+</div>
+</div>
+
+
+<div class="container3">
+	<div class="thumbnail">
+		<img src="https://images.pexels.com/photos/1042594/pexels-photo-1042594.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="image-responsive">
+	</div>
+	<div class="caption">
+		<h3>Museo</h3>
+		<h4>MANITOBA</h4>
+	</div>
+</div>
+
+
+<div class="container4">
+	<div class="content1">
+	<h3>A coffee shop gains a warmer look</h3>
+	<br>
+<p>Museo coffees got in touch with Freya for their renovation. We took over and asked them to have a cup of coffee for themselves while the job is done! Sed posuere consectetur est at lobortis. Fusce dapibs, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Duis mollis, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Pellentsque ornare se lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+</div>
+
+
+<div class="row">
+	<div class="col-lg-6">
+		<img src="http://markup.themewagon.com/tryfreya/assets/images/img_4.jpg">
+	</div>
+	<div class="col-lg-6">
+		<img src="http://markup.themewagon.com/tryfreya/assets/images/img_5.jpg">
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+	<img src="http://markup.themewagon.com/tryfreya/assets/images/img_6.jpg">
+</div>
+</div>
+</div>
+
+
+<div class="container5">
+	<div class="thumbnail1">
+		<img src="https://images.pexels.com/photos/1207966/pexels-photo-1207966.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+	</div>
+	<div class="caption1">
+		<h3>A Touch of Green</h3>
+		<h4>IN BROOKLYN</h4>
+	</div>
+</div>
+
+
+<div class="container6">
+	<div class="content2">
+	<h3>A Brooklyn space becomes greener than ever.</h3>
+	<br>
+<p>With Freya's magical touch, a office space at Brooklyn becomes greener than ever. Cras matti consectetur purus st amet fermentum. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia qua venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula neget.</p>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<img src="http://markup.themewagon.com/tryfreya/assets/images/img_7.jpg">
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-6">
+		<img src="http://markup.themewagon.com/tryfreya/assets/images/img_8.jpg">
+	</div>
+	<div class="col-lg-6">
+		<img src="http://markup.themewagon.com/tryfreya/assets/images/img_9.jpg">
+	</div>
+</div>
+</div>
+
+<div class="container7">
+<div class="thumbnail2">
+	<img src="https://images.pexels.com/photos/2079436/pexels-photo-2079436.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+</div>
+<div class="caption2">
+	<h3>Prestana Remereo</h3>
+<h4>RIO DE JANEIRO</h4>
+</div>
+</div>
+
+
+<div class="container8">
+	<div class="content3">
+		<h4>Prestana Remereo deserved a new coat of paint</h4>
+		<br>
+<p>Prestana Remereo wanted renovation, we simply delivered. Nullam quis risus eget urna mollis ornare vel leo. Donec sed odio dui. Nullam quis risus eget ua mollis ornare vel eu leo. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+</div>
+
+<div class="row">
+	<div class="col-lg-6">
+		<img src="http://markup.themewagon.com/tryfreya/assets/images/img_10.jpg">
+	</div>
+	<div class="col-lg-6">
+		<img src="http://markup.themewagon.com/tryfreya/assets/images/img_11.jpg">
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-6">
+		<img src="http://markup.themewagon.com/tryfreya/assets/images/img_13.jpg">
+		</div>
+		<div class="col-lg-6">
+		<img src="http://markup.themewagon.com/tryfreya/assets/images/img_12.jpg">
+		</div>
+	</div>
+</div>
+
+
+
+<div class="container10">
+	<div class="content4">
+		<h4>Luxurious lifestyle in the Mansion</h4>
+		<br>
+<p>No matter the task, Freya Inc. is up for it. Cum sociis natoque penatibus et magnis dis parturient bee, nascetur ridiculus mus. Nulla vitae elit libero, pharetra. Integer posuere erat ante venenatis posuere velit aliquet. Etiam wagner moura porta malesuada magna mollis euismod mondar alu aflak.</p>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<img src="http://markup.themewagon.com/tryfreya/assets/images/img_14.jpg">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6">
+			<img src="http://markup.themewagon.com/tryfreya/assets/images/img_16.jpg">
+		</div>
+		<div class="col-lg-6">
+			<img src="http://markup.themewagon.com/tryfreya/assets/images/img_17.jpg">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<img src="http://markup.themewagon.com/tryfreya/assets/images/img_15.jpg">
+		</div>
+	</div>
+</div>
+
+<footer>
+	<div class="container11">
+		<div class="icons">
+		 <i class="fab fa-facebook-f"></i>
+       <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter"></i>
+   </div>
+</div>
+
+ <div class="container12">
+ 	<h4>FREYA INCORPORATED, 019 APPELLATION AVE, NEW JERSEY, 535-118-7056</h4>
+
+<h5>Template by Themewagon</h5>
+ </div>
+</footer>
+
+
+
+
+</body>
+</html>
